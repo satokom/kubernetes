@@ -55,6 +55,15 @@ spec:
           value: This app is version 1
         ports:
         - containerPort: 80
+
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -82,3 +91,11 @@ spec:
           value: New app is version 2
         ports:
         - containerPort: 80
+        
+        volumeMounts:
+        - name: nginx-config-volume
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: nginx-config-volume
+        configMap:
+          name: nginx-config
