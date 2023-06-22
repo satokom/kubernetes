@@ -19,6 +19,8 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: app
+  namespace: flux-system
+
 spec:
   hosts:
   - "*"
@@ -43,6 +45,8 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: web-gateway
+  namespace: flux-system
+
 spec:
   selector:
     istio: ingressgateway
