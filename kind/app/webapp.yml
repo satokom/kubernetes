@@ -10,7 +10,7 @@ data:
       <title>Welcome to My Website</title>
     </head>
     <body>
-      <h1>Hello, World!</h1>
+      <h1>Hello, World!HELLLLLLLL</h1>
     </body>
     </html>
 ---
@@ -91,7 +91,7 @@ spec:
           value: New app is version 2
         ports:
         - containerPort: 80
-        
+
         volumeMounts:
         - name: nginx-config-volume
           mountPath: /usr/share/nginx/html
