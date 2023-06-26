@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+     <title>Welcome to nginx!</title>
+    </html>
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: index-dark

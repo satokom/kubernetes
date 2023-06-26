@@ -22,10 +22,10 @@ metadata:
   namespace: flux-system
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
-    targetPort: 80
-    name: test-http
+    targetPort: 8080
+    name: http
   selector:
     app: web
 ---
@@ -54,7 +54,7 @@ spec:
         - name: MSG
           value: This app is version 1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 
         volumeMounts:
         - name: nginx-config-volume
@@ -90,7 +90,7 @@ spec:
         - name: MSG
           value: New app is version 2
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 
         volumeMounts:
         - name: nginx-config-volume
